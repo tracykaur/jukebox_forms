@@ -3,10 +3,9 @@ class SubscribersController < ApplicationController
     @subscribe = Subscriber.new(subscriber_params)
     if @subscribe.save
     redirect_to '/', notice: "Welcome to the list!"
-  else
+    else
     redirect_to '/', notice: { errors: @subscribe.errors}
-  end
-
+    end
   end
 
   private
