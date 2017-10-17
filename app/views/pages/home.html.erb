@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Welcome Fellow Unicorns</h1>
+
+<%= form_for :monkey, url: '/pages/monkey' do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :location %>
+  <%= form.text_field :location %>
+  <br>
+  <%= form.submit %>
+<% end %>
