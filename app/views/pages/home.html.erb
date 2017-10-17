@@ -1,11 +1,15 @@
 <h1>Welcome Fellow Unicorns</h1>
 
-<%= form_for :monkey, url: '/pages/monkey' do |form| %>
-  <%= form.label :name %>
+<p><%= notice %></p>
+<h3>Join <%= @subscribers_count %> other subscribers by joining our mailing list:</h3>
+
+
+  <%= form_for Subscriber.new do |form| %>
+  <strong><%= form.label :name %></strong>
   <%= form.text_field :name %>
   <br>
-  <%= form.label :location %>
-  <%= form.text_field :location %>
+  <strong><%= form.label :email %></strong>
+  <%= form.text_field :email %>
   <br>
   <%= form.submit %>
 <% end %>
